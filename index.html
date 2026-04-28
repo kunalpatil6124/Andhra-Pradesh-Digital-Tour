@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh – A Journey Through Culture, Nature & Progress</title>
+    <meta name="description"
+        content="An interactive storytelling experience exploring the soul of India's southeast. From sacred temples to tech corridors.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">ANDHRA PRADESH</div>
+            <div class="loader-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Attraction Modal -->
+    <div id="attraction-modal" class="modal">
+        <div class="modal-content glass-card">
+            <div class="modal-close">&times;</div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modal-img">
+                </div>
+                <div class="modal-text">
+                    <span class="section-tag" id="modal-tag">Category</span>
+                    <h2 id="modal-title">Title</h2>
+                    <p id="modal-desc">Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Experience -->
+    <div class="bg-particles" id="particles-js"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">ANDHRA PRADESH TOUR</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#map-journey">Map</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#attractions">Wonders</a></li>
+            <li><a href="#cities">Cities</a></li>
+            <li><a href="#development">Progress</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="hero.png" alt="Andhra Pradesh Landscape">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span>Andhra</span> <span>Pradesh</span> <span>–</span> <span>A</span> <span>Journey</span>
+                <span>Through</span> <span>Culture,</span> <span>Nature</span> <span>&</span> <span>Progress</span>
+            </h1>
+            <p class="hero-subtitle">Where ancient whispers meet tomorrow's echoes.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="content-grid">
+            <div class="text-side">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">Soul of the Southeast</h2>
+                <div class="intro-text">
+                    <p>Andhra Pradesh is a land where <span class="accent-text">ancient temples</span> whisper stories
+                        from the dawn of time, and the <span class="accent-text">Bay of Bengal</span> sings a ceaseless
+                        lullaby along its shores. This is India’s soulful southeast—a tapestry woven with fiery cuisine,
+                        graceful dance, and resilient spirit.</p>
+                    <br>
+                    <p>From the <span class="accent-text">sacred hills of Tirumala</span> to the bustling tech corridors
+                        of <span class="accent-text">Visakhapatnam</span>, the state marries deep-rooted tradition with
+                        an unstoppable drive toward tomorrow. It is a place where every spice tells a story, every
+                        monument echoes with empire, and every journey becomes a discovery.</p>
+                </div>
+            </div>
+            <div class="image-side">
+                <div class="image-wrapper glass">
+                    <img src="Andhra Pradesh.jpg" loading="lazy" alt="Godavari Delta">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="map-journey">
+        <span class="section-tag">Interactive Exploration</span>
+        <h2 class="section-title">Trace the Soul of Andhra</h2>
+        <div class="map-container">
+            <div class="map-svg-wrapper">
+                <!-- Stylized AP Map -->
+                <svg viewBox="0 0 1000 1000" class="ap-map">
+                    <path class="map-path"
+                        d="M850,200 L950,250 L900,450 L800,600 L650,750 L500,850 L350,950 L250,900 L200,750 L300,600 L450,500 L550,400 L650,300 Z" />
+
+                    <!-- Hotspots -->
+                    <g class="hotspot" data-city="Visakhapatnam" style="--tx: 860px; --ty: 450px;">
+                        <circle cx="860" cy="450" r="10" class="pin" />
+                        <circle cx="860" cy="450" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Tirupati" style="--tx: 350px; --ty: 940px;">
+                        <circle cx="350" cy="940" r="10" class="pin" />
+                        <circle cx="350" cy="940" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Araku Valley" style="--tx: 920px; --ty: 230px;">
+                        <circle cx="920" cy="230" r="10" class="pin" />
+                        <circle cx="920" cy="230" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Vijayawada" style="--tx: 600px; --ty: 620px;">
+                        <circle cx="600" cy="620" r="10" class="pin" />
+                        <circle cx="600" cy="620" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Srikalahasti Temple" style="--tx: 420px; --ty: 880px;">
+                        <circle cx="420" cy="880" r="10" class="pin" />
+                        <circle cx="420" cy="880" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Borra Caves" style="--tx: 880px; --ty: 280px;">
+                        <circle cx="880" cy="280" r="10" class="pin" />
+                        <circle cx="880" cy="280" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Lambasingi" style="--tx: 910px; --ty: 360px;">
+                        <circle cx="910" cy="360" r="10" class="pin" />
+                        <circle cx="910" cy="360" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="Lepakshi Temple" style="--tx: 400px; --ty: 780px;">
+                        <circle cx="400" cy="780" r="10" class="pin" />
+                        <circle cx="400" cy="780" r="25" class="pulse" />
+                    </g>
+                    <g class="hotspot" data-city="INS Kursura Museum" style="--tx: 840px; --ty: 480px;">
+                        <circle cx="840" cy="480" r="10" class="pin" />
+                        <circle cx="840" cy="480" r="25" class="pulse" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="map-info-card glass-card" id="map-card">
+                <div class="card-close">&times;</div>
+                <img src="hero.png" alt="City" id="card-img">
+                <h3 id="card-title">Select a Destination</h3>
+                <p id="card-desc">Click on a pulsing hotspot to explore the details of this iconic location.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geography Section -->
+    <section id="geography">
+        <div class="content-grid" style="direction: rtl;">
+            <div class="text-side" style="direction: ltr;">
+                <span class="section-tag">Geography</span>
+                <h2 class="section-title">Between the Ghats & the Sea</h2>
+                <div class="intro-text">
+                    <p>Andhra Pradesh stretches along India’s southeastern coast, cradled by the Bay of Bengal on the
+                        east. The coastline, nearly 975 kilometers long, is the state’s lifeline, gifting it fertile
+                        deltas, thriving ports, and sun-kissed beaches.</p>
+                    <br>
+                    <p>Two mighty rivers—the Godavari and the Krishna—carve lush green veins through the landscape,
+                        creating the rice bowls of the delta region. To the west, the Eastern Ghats rise in ancient,
+                        mineral-rich folds, sheltering misty valleys and biodiverse forests.</p>
+                </div>
+            </div>
+            <div class="image-side">
+                <div class="image-wrapper glass">
+                    <img src="geography/AP-Beaches_Feature.webp" loading="lazy" alt="Andhra Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture">
+        <span class="section-tag">Culture & Traditions</span>
+        <h2 class="section-title">A Living Heritage</h2>
+        <p style="max-width: 800px; color: var(--text-secondary); margin-bottom: 3rem;">
+            Andhra’s cultural heartbeat is loud, colorful, and deeply inclusive. From the quicksilver footwork of
+            Kuchipudi to the intricate weaves of Dharmavaram, life here prizes hospitality and deep-rooted pride.
+        </p>
+        <div class="grid-container">
+            <div class="culture-card glass">
+                <img src="culture/Kuchipudi.jpg" loading="lazy" alt="Kuchipudi Dance">
+                <div class="card-overlay">
+                    <h3>Kuchipudi</h3>
+                    <p>One of India’s eight classical dance forms, born here—its expressive storytelling once echoed in
+                        temple courtyards.</p>
+                </div>
+            </div>
+            <div class="culture-card glass">
+                <img src="culture/ugadi.jpg" loading="lazy" alt="Festivals">
+                <div class="card-overlay">
+                    <h3>Festivals of Light & Life</h3>
+                    <p>Ugadi and Sankranti turn the skies into a canvas of kites and village squares into stages for
+                        tradition.</p>
+                </div>
+            </div>
+            <div class="culture-card glass">
+                <img src="culture/mangalagiri.webp" loading="lazy" alt="Traditional Clothing">
+                <div class="card-overlay">
+                    <h3>Timeless Weaves</h3>
+                    <p>Elegant handwoven silk and cotton sarees, from the rich Dharmavaram to the graceful Mangalagiri
+                        weaves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="food">
+        <span class="section-tag">Cuisine</span>
+        <h2 class="section-title">The Symphony of Spice</h2>
+        <p style="max-width: 800px; color: var(--text-secondary); margin-bottom: 3rem;">
+            To eat in Andhra is to embrace fire with joy. Every meal is a testament to the belief that food should
+            comfort, challenge, and celebrate life all at once.
+        </p>
+        <div class="food-grid">
+            <div class="food-item food-1">
+                <img src="cuisine/Andra-Thali.jpg" loading="lazy" alt="Andhra Thali">
+                <div class="food-info">
+                    <h3>The Classic Thali</h3>
+                    <p>Steaming rice, tangy pappu, and fiery avakaya pickles—a ritual of flavor.</p>
+                </div>
+            </div>
+            <div class="food-item food-2">
+                <img src="cuisine/aromatic biryani.webp" loading="lazy" alt="Andhra Biryani">
+                <div class="food-info">
+                    <h3>Aromatic Biryani</h3>
+                    <p>Layered with tender meat and laced with local spices that rival any royal kitchen.</p>
+                </div>
+            </div>
+            <div class="food-item food-3">
+                <img src="cuisine/prawn iguru.jpg" loading="lazy" alt="Seafood">
+                <div class="food-info">
+                    <h3>Coastal Treasures</h3>
+                    <p>Prawn iguru and spicy crab masala from the Bay of Bengal.</p>
+                </div>
+            </div>
+            <div class="food-item food-4">
+                <img src="cuisine/Dryfruit-Bellam-Pootharekulu.jpg" loading="lazy" alt="Sweets">
+                <div class="food-info">
+                    <h3>Sweet Traditions</h3>
+                    <p>Tissue-thin Pootharekulu melting on the tongue like paper-thin tradition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourist Attractions -->
+    <section id="attractions">
+        <span class="section-tag">Explore</span>
+        <h2 class="section-title">Wonders of Andhra</h2>
+
+        <div class="attractions-tabs">
+            <button class="tab-btn active" data-filter="all">All Wonders</button>
+            <button class="tab-btn" data-filter="spiritual">Spiritual</button>
+            <button class="tab-btn" data-filter="nature">Nature</button>
+            <button class="tab-btn" data-filter="historical">Historical</button>
+            <button class="tab-btn" data-filter="modern">Modern</button>
+        </div>
+
+        <div class="attractions-grid">
+            <div class="attraction-card glass" data-category="spiritual">
+                <img src="explore/tirumala.jpg" loading="lazy" alt="Tirumala">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Spiritual</span>
+                    <h3>Tirumala Venkateswara</h3>
+                    <p>One of the world’s richest temples, where the chanting of ‘Govinda’ and sheer devotion create a
+                        pilgrimage beyond compare.</p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="spiritual">
+                <img src="explore/Srikalahasti Temple.jpg" loading="lazy" alt="Srikalahasti Temple">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Spiritual</span>
+                    <h3>Srikalahasti Temple</h3>
+                    <p>Renowned for its massive, intricate temple structure, often called the Kalahastiswara temple.</p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="nature">
+                <img src="explore/araku valley.jpg" loading="lazy" alt="Araku Valley">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Nature</span>
+                    <h3>Araku Valley</h3>
+                    <p>A coffee-scented paradise tucked in the Eastern Ghats, wrapped in waterfalls and tribal culture.
+                    </p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="nature">
+                <img src="explore/Borra Caves.jpg" loading="lazy" alt="Borra Caves">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Nature</span>
+                    <h3>Borra Caves</h3>
+                    <p>80-meter deep limestone caves in the Araku Valley featuring stunning stalactite and stalagmite
+                        formations.
+                    </p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="nature">
+                <img src="explore/Lambasingi.webp" loading="lazy" alt="Lambasingi">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Nature</span>
+                    <h3>Lambasingi</h3>
+                    <p>Known as the "Kashmir of Andhra Pradesh," this is the only place in the state where temperatures
+                        can drop to near freezing, sometimes experiencing snow.
+                    </p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="historical">
+                <img src="explore/lepakshi temple.webp" loading="lazy" alt="Lepakshi">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Historical</span>
+                    <h3>Lepakshi Temple</h3>
+                    <p>A Vijayanagara wonder with the iconic hanging pillar and ceilings painted with flowing gods and
+                        demons.</p>
+                </div>
+            </div>
+            <div class="attraction-card glass" data-category="modern">
+                <img src="explore/INS kursura.jpg" loading="lazy" alt="Submarine Museum">
+                <div class="attraction-overlay">
+                    <span class="section-tag" style="font-size: 0.7rem;">Modern</span>
+                    <h3>INS Kursura Museum</h3>
+                    <p>A decommissioned Soviet-built submarine turned into an immersive museum on the shores of Vizag.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section id="cities">
+        <div class="cities-header">
+            <span class="section-tag">Urban Pulse</span>
+            <h2 class="section-title">Major Cities</h2>
+        </div>
+
+        <div class="cities-wrapper">
+            <div class="cities-container">
+                <div class="city-card glass-card">
+                    <div class="city-image"><img src="cities/Visakhapatnam.jpg" loading="lazy" alt="Visakhapatnam">
+                    </div>
+                    <h3>Visakhapatnam</h3>
+                    <p>The crown jewel of the east coast. A major port and naval base that balances shipbuilding and
+                        software with golden beaches.</p>
+                </div>
+                <div class="city-card glass-card">
+                    <div class="city-image"><img src="cities/Vijayawada.jpg" loading="lazy" alt="Vijayawada"></div>
+                    <h3>Vijayawada</h3>
+                    <p>The commercial nerve center on the Krishna River, buzzing with entrepreneurial energy and home to
+                        the Kanaka Durga Temple.</p>
+                </div>
+                <div class="city-card glass-card">
+                    <div class="city-image"><img src="cities/Amaravati.jpg" loading="lazy" alt="Amaravati"></div>
+                    <h3>Amaravati</h3>
+                    <p>The ambitious new capital, reviving an ancient Buddhist metropolis and bridging a glorious past
+                        with a smart future.</p>
+                </div>
+                <div class="city-card glass-card">
+                    <div class="city-image"><img src="cities/Tirupati.jpg" loading="lazy" alt="Tirupati"></div>
+                    <h3>Tirupati</h3>
+                    <p>A holy city and spiritual powerhouse that welcomes the world to its sacred hills and ancient
+                        shrines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economy & Development -->
+    <section id="development">
+        <span class="section-tag">Progress</span>
+        <h2 class="section-title">An Emerging Engine</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Rice Bowl of India</h3>
+                    <p>Agriculture thrives on fertile deltas—rice, chilies, and mangoes lead the nation’s crop roster.
+                    </p>
+                    <div class="timeline-image"><img src="progress/Rice Bowl of India.jpg" loading="lazy"
+                            alt="Agriculture"></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Industrial Corridors</h3>
+                    <p>Shipbuilding, petrochemicals, and pharma hubs driving growth along the Visakhapatnam-Chennai
+                        corridor.</p>
+                    <div class="timeline-image"><img src="progress/Visakhapatnam-Chennai corridor..jpg" loading="lazy"
+                            alt="Industry"></div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Digital Future</h3>
+                    <p>The IT and startup ecosystem is booming, driven by government innovation hubs and a digitally
+                        proactive workforce.</p>
+                    <div class="timeline-image"><img src="progress/IT hub ap.jpeg" loading="lazy" alt="IT Hub"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutions -->
+    <section id="institutions">
+        <span class="section-tag">Pillars</span>
+        <h2 class="section-title">Important Institutions</h2>
+        <div class="inst-grid">
+            <div class="inst-card glass">
+                <div class="inst-image"><img src="pillars/ISRO SDSC.webp" loading="lazy" alt="ISRO"></div>
+                <h3>ISRO SDSC</h3>
+                <p>India’s primary orbital launch site, where missions soar into history.</p>
+            </div>
+            <div class="inst-card glass">
+                <div class="inst-image"><img src="pillars/Vizag Port.jpg" loading="lazy" alt="Vizag Port"></div>
+                <h3>Vizag Port</h3>
+                <p>One of India's major ports, a vital deep-water artery for global trade.</p>
+            </div>
+            <div class="inst-card glass">
+                <div class="inst-image"><img src="pillars/Andhra University.jpg" loading="lazy" alt="Andhra University">
+                </div>
+                <h3>Andhra University</h3>
+                <p>A century-old seat of learning overlooking the Bay of Bengal.</p>
+            </div>
+            <div class="inst-card glass">
+                <div class="inst-image"><img src="pillars/IIt Tirupati.jpg" loading="lazy" alt="IIT Tirupati">
+                </div>
+                <h3>IIT Tirupati</h3>
+                <p>A premier institute driving innovation, research, and technological excellence in Andhra Pradesh</p>
+            </div>
+            <div class="inst-card glass">
+                <div class="inst-image"><img src="pillars/National Institute of Design (NID).jpg" loading="lazy"
+                        alt="National Institute of Design">
+                </div>
+                <h3>National Institute of Design</h3>
+                <p>A premier institute fostering excellence in design, innovation, and creative problem-solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section id="fun-facts">
+        <span class="section-tag">Trivia</span>
+        <h2 class="section-title">Did You Know?</h2>
+        <div class="facts-grid">
+            <div class="fact-card glass">
+                <div class="fact-icon">🐂</div>
+                <div class="fact-info">
+                    <span class="fact-number" data-target="27">0</span>
+                    <span class="fact-suffix">ft</span>
+                </div>
+                <p>The Monolithic Nandi at Lepakshi is one of the largest in India, carved from a single granite stone.
+                </p>
+            </div>
+            <div class="fact-card glass">
+                <div class="fact-icon">🌊</div>
+                <div class="fact-info">
+                    <span class="fact-number" data-target="975">0</span>
+                    <span class="fact-suffix">km</span>
+                </div>
+                <p>Boasting the second longest coastline in India, Andhra is a gateway to the vast blue Bay of Bengal.
+                </p>
+            </div>
+            <div class="fact-card glass">
+                <div class="fact-icon">🍬</div>
+                <div class="fact-info">
+                    <span class="fact-number" data-target="50">0</span>
+                    <span class="fact-suffix">+</span>
+                </div>
+                <p>Pootharekulu, the 'Paper Sweet', is made of layers so thin they melt instantly—a craft of pure
+                    patience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="final-scene">
+        <div class="conclusion-content">
+            <h2 class="hero-title">A Land of <span>Infinite</span> Stories.</h2>
+            <p class="conclusion-text">
+                Andhra Pradesh is not a place you merely visit—it is a journey that seeps into your senses and stays
+                long after you leave. The history is etched in stone, the future is written in progress, and the soul is
+                found in the people.
+            </p>
+            <div class="final-cta">
+                <a href="#hero" class="tab-btn">BEGIN YOUR JOURNEY AGAIN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yuva Sangam Banner -->
+    <section id="yuva-sangam-banner">
+        <div class="banner-wrapper glass">
+            <img src="yuva sangam phase 6.jpg" alt="Yuva Sangam Phase 6" class="banner-img">
+            <div class="banner-overlay">
+                <span class="section-tag">National Integration</span>
+                <h2 class="section-title">Yuva Sangam Phase VI</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="glass">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- About Project -->
+                <div class="footer-section about-project">
+                    <h3 class="footer-title">About This Project</h3>
+                    <p class="footer-desc">This website is created as part of the <span class="accent-text">Yuva Sangam
+                            Phase VI</span> initiative. It showcases Andhra Pradesh’s rich culture, diverse geography,
+                        and rapid development, designed as an immersive digital storytelling experience.</p>
+                </div>
+
+                <!-- Creator Info -->
+                <div class="footer-section creator-info">
+                    <h3 class="footer-title">Creator</h3>
+                    <div class="creator-card glass">
+                        <div class="creator-details">
+                            <h4 class="creator-name">Kunal Patil</h4>
+                            <p class="creator-bg">M.Sc Computer Science</p>
+                            <p class="creator-goal"><span class="accent-text">Goal:</span> Improve Ownself At Every
+                                Moment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Andhra Pradesh Digital Tour. Created By Kunal Patil.
+                </div>
+                <div class="tagline">
+                    Crafted with passion & purpose
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
